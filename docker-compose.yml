@@ -1,0 +1,27 @@
+---
+version: "3.8"
+services:
+  movies:
+    image: fayaz1993/paytm-movie-netflix:latest
+    ports:
+      - 91:80
+    deploy:
+      replicas: 3
+  train:
+    image: fayaz1993/paytm-train-netflix:latest
+    ports:
+      - 92:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: fayaz1993/paytm-dth-netflix:latest
+    ports:
+      - 93:80
+    deploy:
+      replicas: 3
+  dth:
+    image: fayaz1993/paytm-recharge-netflix:latest
+    ports:
+      - 94:80
+    deploy:
+      replicas: 3
